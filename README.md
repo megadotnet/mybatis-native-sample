@@ -31,7 +31,7 @@ Docker should be installed and configured on your machine prior to creating the 
 To create the image, run the following goal:
 
 ```
-$ ./mvnw spring-boot:build-image -Pnative
+$ ./mvn spring-boot:build-image -Pnative
 ```
 
 Then, you can run the app like any other container:
@@ -49,7 +49,7 @@ NOTE: GraalVM 22.3+ is required.
 To create the executable, run the following goal:
 
 ```
-$ ./mvnw native:compile -Pnative
+$ ./mvn clean native:compile -Pnative 
 ```
 
 Then, you can run the app as follows:
@@ -63,7 +63,7 @@ This is an efficient way to validate the compatibility of your application.
 To run your existing tests in a native image, run the following goal:
 
 ```
-$ ./mvnw test -PnativeTest
+$ ./mvn test -PnativeTest
 ```
 
 
