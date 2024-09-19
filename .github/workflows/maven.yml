@@ -29,6 +29,10 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -Pnative clean native:compile --file pom.xml
+    - name: run app
+      run: |
+         cd target
+         ./mybatis-sample
     - uses: actions/upload-artifact@v4
       with:
         name: mybatis-sample
