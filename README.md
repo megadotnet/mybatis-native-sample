@@ -74,3 +74,12 @@ While most of the inheritance is fine, it also inherits unwanted elements like `
 To prevent this, the project POM contains empty overrides for these elements.
 If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
 
+### Docker with native App
+```
+$ docker build -f Dockerfile.native --build-arg APP_FILE=mybatis-sample -t mybatis-sample:native.0.0.1-SNAPSHOT .  
+```
+
+Run 
+```
+$ docker run -d --name native -p 28769:8080 mybatis-sample:native.0.0.1-SNAPSHOT
+```

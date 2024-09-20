@@ -1,0 +1,7 @@
+FROM ubuntu:22.04
+LABEL org.opencontainers.image.authors="kmdxdk1@hotmail.com"
+ARG APP_FILE
+EXPOSE 8080
+COPY target/${APP_FILE} app
+RUN chmod +x /app
+ENTRYPOINT ["/app"]
