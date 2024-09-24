@@ -22,11 +22,11 @@ public class MybatisNativeSampleApplication {
   CommandLineRunner sampleCommandLineRunner() {
     return args -> {
       City city = new City();
-      city.setName("San Francisco");
+      city.setName("BeiJing");
       city.setState("CA");
       city.setCountry("US");
       cityMapper.insert(city);
-      System.out.println(this.cityMapper.findById(city.getId()));
+      System.out.println("Server:"+this.cityMapper.findById(city.getId()));
     };
   }
 
