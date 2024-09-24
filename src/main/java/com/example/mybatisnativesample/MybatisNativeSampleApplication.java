@@ -14,9 +14,12 @@ public class MybatisNativeSampleApplication {
 
   private final CityMapper cityMapper;
 
-  public MybatisNativeSampleApplication(CityMapper cityMapper) {
-    this.cityMapper = cityMapper;
-  }
+  // Constructor for MybatisNativeSampleApplication class
+    // Injects the CityMapper dependency
+    public MybatisNativeSampleApplication(CityMapper cityMapper) {
+      // Assign the injected CityMapper to the class field
+      this.cityMapper = cityMapper;
+    }
 
   @Bean
   CommandLineRunner sampleCommandLineRunner() {
