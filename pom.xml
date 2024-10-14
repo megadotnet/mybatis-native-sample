@@ -18,7 +18,10 @@
 		<license/>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+        <name>Peter Liu</name>    
+        <email>kmdxdk1@hotmail.com</email>   
+		</developer>
 	</developers>
 	<scm>
 		<connection/>
